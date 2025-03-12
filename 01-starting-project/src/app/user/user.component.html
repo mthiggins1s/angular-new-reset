@@ -1,0 +1,9 @@
+<div>
+  <button (click)="onSelectUser()">
+    <!-- Angular syntax to adding an eventListener -->
+    <img [src]="imagePath" [alt]="selectedUser.name" />
+    <!-- put square brackets around the SRC; property binding for what we want to configure. Then we reference the path of images. -->
+    <span>{{ selectedUser.name }}</span>
+    <!-- using String Interpolation; substitutes values of variables into placeholders in a string. -->
+  </button>
+</div>
