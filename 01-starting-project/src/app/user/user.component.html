@@ -1,9 +1,11 @@
 <div>
   <button (click)="onSelectUser()">
     <!-- Angular syntax to adding an eventListener -->
-    <img [src]="imagePath" [alt]="selectedUser.name" />
+    <img [src]="imagePath()" [alt]="selectedUser().name" />
     <!-- put square brackets around the SRC; property binding for what we want to configure. Then we reference the path of images. -->
-    <span>{{ selectedUser.name }}</span>
+    <span>{{ selectedUser().name }}</span>
     <!-- using String Interpolation; substitutes values of variables into placeholders in a string. -->
   </button>
 </div>
+
+<!-- When you have signals, you don't access the value in the signal, you instead have to CALL the signal value as a FUNCTION with (). This then executes the signals 'read' function which gives you the value thats currently being stored. (Lines 4 and 6) -->
